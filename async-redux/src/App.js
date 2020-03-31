@@ -13,7 +13,7 @@ const App = props => {
   return (
     <div className="App">
       <h1>StarWars Characters</h1>
-      {props.starError && <p>Error => {props.starError}</p>}
+      {/*{props.starError && <p>Error => {props.starError}</p>}*/}
 
       {props.isStarLoading ? <h2>Still Loading...</h2> : <Character />}
     </div>
