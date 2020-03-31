@@ -1,12 +1,21 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
 const Character = props => {
-    return (
-        <div>
-
-        </div>
-    );
+  const { character } = props;
+  return (
+    <div>
+      {character.map((star, index) => {
+        return <h1 key={index}>{star.name}</h1>;
+      })}
+    </div>
+  );
 };
 
-export default Character;
+const mapStateToProps = state => {
+  return {
+    character: []
+  };
+};
+
+export default connect(mapStateToProps, {})(Character);
